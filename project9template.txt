@@ -1,0 +1,33 @@
+# Project 9 Solutions
+
+# Student Name: Annie Thompson
+
+# Peer Collaborators (if any) and nature of the collaboration
+# TA help sought (if any) ........
+# Online resources used (if any) and weblink for location of resources ........
+
+# 1a. (2 pt)
+# Comment about method of solution: I used awk and mysum to find the total number of yellow taxi passengers.
+Solution itself cat yellow_tripdata_2019-06.csv | awk -F, '{if ($2 == "2019-06-01") {mysum = mysum +$5}} END{print mysum}' (no hashtag needed; this should be raw UNIX code on this line)
+# Output from the solution: There were 1641396 yellow taxi passengers.
+
+# 1b. (2 pt)
+# Comment about method of solution: I used awk to cut and add the data in order to find the mean.
+Solution itself cat yellow_tripdata_2019-06.csv | awk -F, '{mytotal = mytotal + $17; myrides = myrides + 1} END{print mytotal / myrides}'(no hashtag needed; this should be raw UNIX code on this line)
+# Output from the solution: The mean total number is 11.5
+
+# 2a. (2 pts)
+# Comment about method of solution: I used awk and mysum to find the total amount spent on grocery purchases.
+Solution itself cat 5000_transactions.csv | awk -F, '{if ($3 == "23-DEC-17") {mysum = mysum + $5}} END{print mysum}(no hashtag needed; this should be raw UNIX code on this line)
+# Output from the solution: The total amount spent on grocery purchases is 108408.
+
+# 2b. (2 pts)
+# Comment about method of solution: I used to awk, mytotal, and mypurchases to find the average amount spent on a transaction.
+Solution itself cat 5000_transactions.csv | awk -F, '{mytotal = mytotal +$5; mypurchases = mypurchases + 1} END{print mytotal/mypurchases}'  (no hashtag needed; this should be raw UNIX code on this line)
+# Output from the solution: The average amount spent on a transaction is 3.59838
+
+# 3a. (2 pt)
+# Comment about method of solution: ........
+Solution itself ........ (no hashtag needed; this should be raw UNIX code on this line)
+# Output from the solution ........
+
